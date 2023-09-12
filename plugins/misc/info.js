@@ -7,7 +7,9 @@ exports.run = {
       args,
       command
    }) => {
-      if (command == 'script' || command == 'sc') return client.reply(m.chat, info(), m)
+      if (command == 'script' || command == 'sc') return client.sendMessageModify(m.chat, info(), m, {
+         largeThumb: true,
+         thumbnail: 'https://telegra.ph/file/f6fe9085e8d54b4b6e0ad.jpg'
       if (command == 'tnc') return client.sendMessageModify(m.chat, tnc(), m, {
          largeThumb: true,
          thumbnail: 'https://telegra.ph/file/f6fe9085e8d54b4b6e0ad.jpg'
