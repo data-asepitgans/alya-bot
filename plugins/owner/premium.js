@@ -1,4 +1,4 @@
-exports.run = {
+/*exports.run = {
    usage: ['+prem', '-prem'],
    use: 'mention or reply',
    category: 'owner',
@@ -42,4 +42,4 @@ exports.run = {
    owner: true,
    cache: true,
    location: __filename
-}
+}*/
