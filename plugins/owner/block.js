@@ -1,4 +1,4 @@
-exports.run = {
+/*exports.run = {
    usage: ['block', 'unblock'],
    use: 'mention or reply',
    category: 'owner',
@@ -31,4 +31,4 @@ exports.run = {
       }
    },
    owner: true
-}
+}*/
