@@ -1,4 +1,4 @@
-exports.run = {
+/*exports.run = {
    usage: ['info'],
    category: 'user info',
    async: async (m, {
@@ -13,4 +13,4 @@ exports.run = {
    error: false,
    cache: true,
    location: __filename
-}
+}*/
