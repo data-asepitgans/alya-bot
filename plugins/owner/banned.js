@@ -1,4 +1,4 @@
-exports.run = {
+/*exports.run = {
    usage: ['ban', 'unban'],
    use: 'mention or reply',
    category: 'owner',
@@ -44,4 +44,4 @@ exports.run = {
    owner: true,
    cache: true,
    location: __filename
-}
+}*/
