@@ -11,21 +11,25 @@ exports.run = {
       Scraper,
       Func
    }) => {
+       client.sendReact(m.chat, '🕒', m.key)
       if (!text) return client.reply(m.chat, Func.example(isPrefix, command, 'id i love you'), m)
       if (text && m.quoted && m.quoted.text) {
          let lang = text.slice(0, 2)
          try {
             let data = m.quoted.text
             let json = await Func.fetchJson(API('alya', '/api/translate', { text: data, iso: lang }, 'apikey'))
+            client.sendReact(m.chat, '✅', m.key)
             client.reply(m.chat, json.data.text, m)
          } catch {
             return client.reply(m.chat, Func.texted('bold', `🚩 Kode bahasa tidak didukung.`), m)
          }
       } else if (text) {
+         client.sendReact(m.chat, '🕒', m.key)
          let lang = text.slice(0, 2)
          try {
             let data = text.substring(2).trim()
            let json = await Func.fetchJson(API('alya', '/api/translate', { text: data, iso: lang }, 'apikey'))
+            client.sendReact(m.chat, '✅', m.key)
             client.reply(m.chat, json.data.text, m)
          } catch {
             return client.reply(m.chat, Func.texted('bold', `🚩 Kode bahasa tidak didukung.`), m)
