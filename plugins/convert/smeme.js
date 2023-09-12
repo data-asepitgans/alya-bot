@@ -14,6 +14,7 @@ exports.run = {
          if (!text) return client.reply(m.chat, Func.example(isPrefix, command, 'Hi | Dude'), m)
          client.sendReact(m.chat, '🕒', m.key)
          let [top, bottom] = text.split`|`
+         client.sendReact(m.chat, '✅', m.key)
          if (m.quoted ? m.quoted.message : m.msg.viewOnce) {
             let type = m.quoted ? Object.keys(m.quoted.message)[0] : m.mtype
             let q = m.quoted ? m.quoted.message[type] : m.msg
